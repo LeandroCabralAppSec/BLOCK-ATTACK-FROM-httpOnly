@@ -1,0 +1,11 @@
+Você pode atenuar os ataques XSS mais comuns usando HttpOnly e Secure sinalizando com seu cookie.
+XSS é perigoso. Existe um número crescente de ataques XSS diariamente, proteja seus aplicativos da web.
+
+You can mitigate the most common XSS attacks using HttpOnly and Secure signaling with your cookie.
+XSS is dangerous. There is an increasing number of XSS attacks daily, protect your web applications.
+
+# BLOQUEAR ATAQUE DE httpOnly #
+# BLOCK ATTACK FROM httpOnly #
+<IfModule mod_headers.c>
+    Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
+</IfModule>
